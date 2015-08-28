@@ -22,13 +22,16 @@ var BasketComp = React.createClass({
 	render: function(){
 		var selectedProducts = this.state.items;
 		var cartItems = this.state.cartItems;
+		var totCartCount = this.state.totalItems;
 		return (
 			<div className="basket">
 				<h5>Your Basket</h5>
 				<CartItemList products={selectedProducts} cartItems={cartItems} />
+				{totCartCount > 0 ? (
 				<h6>
 					<a href="#">Proceed to Checkout</a>
 				</h6>
+				): null}
 			</div>
 		);
 	}
@@ -55,7 +58,9 @@ var CartItemList = React.createClass({
 		return (
 			<div className="basket-list">
 			<p>Your Orders: {totCartCount}</p>
+			{totCartCount > 0 ?
 			<ul>{itemsList}</ul>
+			: null}
 			</div>
 		);
 	}

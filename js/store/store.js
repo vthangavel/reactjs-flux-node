@@ -8,7 +8,8 @@ var ObjEventEmitter = new EventEmitter;
 
 var itemStore = {
 	items: [],
-	cartItems: {}
+	cartItems: {},
+	totalItems: 0
 };
 
 var Store = ReactObjAssign(ObjEventEmitter, {
@@ -39,6 +40,7 @@ var Store = ReactObjAssign(ObjEventEmitter, {
 				}
 			}
 			itemStore.cartItems[prodId]['count'] += 1;
+			itemStore.totalItems += 1;
 		}
 	},
 
@@ -48,6 +50,7 @@ var Store = ReactObjAssign(ObjEventEmitter, {
 			try{
 				if(itemStore.cartItems[prodId]['count'] > 0){
 					itemStore.cartItems[prodId]['count'] -= 1;
+					itemStore.totalItems -= 1;
 				}
 			}catch(e){
 				console.log(e.message);
