@@ -1,5 +1,5 @@
 {
-  "name": "react-cart",
+  "name": "reactjs-flux-node",
   "version": "0.0.1",
   "description": "Shopping Cart developed with React + Node in Flux framework",
   "main": "js/app.js",
