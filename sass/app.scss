@@ -1,0 +1,64 @@
+@import "normalize";
+
+body{
+	background: #efefef;
+}
+
+a{
+	color: blue;
+}
+
+ul {
+	padding: 0;
+}
+
+ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 5px;
+}
+
+.products-list img{
+	max-width: 150px ;
+}
+
+.basket{
+	li{
+		display: block;
+	}
+}
+
+header, #page-content, footer{
+	border-bottom: 1px solid #d9d9d9;
+}
+.products-list{
+	border-bottom: 1px solid #d9d9d9;
+	padding: 0;
+}
+
+/*Simple Styling*/
+header, footer{
+	background-color: #232f3e;
+	color: #fff;
+}
+h1, p{
+	margin: 0;
+}
+
+h1{
+	padding: 1em;
+	text-align: center;
+}
+footer{
+	font-size: 0.8em;
+	text-align: center;
+	padding: 1em;
+}
+
+#page-content p, .basket li, h5, h6, .products-list li{
+	padding-left: 20px;
+}
+
+#page-content{
+	padding: 2em 0;
+}
