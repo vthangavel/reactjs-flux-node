@@ -7,11 +7,11 @@ describe('Content', function(){
 
 
 		var ProductJson = require('../../data.js').fakeData;
-		console.log(ProductJson);
 
-		var ProductListing = TestUtils.renderIntoDocument({
+		var ProductListing = TestUtils.renderIntoDocument(
 			<ContentView products={ProductJson} />
-		});
-		console.log(ProductListing)
+		);
+
+		expect(ProductListing).toBeDefined();
 	});
 });

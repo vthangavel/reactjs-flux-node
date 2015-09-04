@@ -1,0 +1,93 @@
+browserify
+browserify will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single 
+
+ejs
+Embedded JavaScript templates
+
+envify
+Selectively replace Node-style environment variables with plain strings. 
+Available as a standalone CLI tool and a Browserify v2 transform.
+
+express
+The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.
+
+Express does not force you to use any specific ORM or template engine. With support for over 14 template engines via Consolidate.js, you can quickly craft your perfect framework.
+
+flux
+An application architecture based on a unidirectional data flow
+
+gulp
+The streaming build system
+
+gulp-connect
+Gulp plugin to run a webserver (with LiveReload)
+
+gulp-sass
+Sass plugin for Gulp.
+
+iojs
+NOREADME
+
+jest-cli
+Painless JavaScript Unit Testing.
+
+Familiar Approach: Built on top of the Jasmine test framework, using familiar expect(value).toBe(other) assertions
+
+Mock by Default: Automatically mocks CommonJS modules returned by require(), making most existing code testable
+
+Short Feedback Loop: DOM APIs are mocked and tests run in parallel via a small node.js command line utility
+
+node-jsx
+transparently require() jsx from node
+
+react
+React is a JavaScript library for building user interfaces.
+An npm package to get you immediate access to React, without also requiring the JSX transformer. This is especially useful for cases where you want to browserify your module using React.
+
+Note: by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.
+
+To use React in production mode, set the environment variable NODE_ENV to production. A minifier that performs dead-code elimination such as UglifyJS is recommended to completely remove the extra code present in development mode.
+
+react-tools
+A set of complementary tools to React, including the JSX transformer.
+This package compliments the usage of React. It ships with tools that are often used in conjunction.
+
+JSX
+This package installs a jsx executable that can be used to transform JSX into vanilla JS. This is often used as part of a build step. This transform is also exposed as an API.
+
+By default JSX files with a .js extension are transformed. Use the -x option to transform files with a .jsx extension.
+
+
+reactify
+Browserify transform for JSX (a superset of JS used by React.js)
+var React = require('react')
+
+class Hello extends React.Component {
+
+  render() {
+    return <div>Hello, {this.props.name}!</div>
+  }
+}
+Save the snippet above as main.js and then produce a bundle with the following command:
+
+% browserify -t reactify main.js
+reactify transform activates for files with either .js or .jsx extensions.
+
+If you want to reactify modules with other extensions, pass an -x / --extension option:
+
+% browserify -t coffeeify -t [ reactify --extension coffee ] main.coffee
+If you don't want to specify extension, just pass --everything option:
+
+% browserify -t coffeeify -t [ reactify --everything ] main.coffee
+
+
+UglifyJS
+JavaScript parser, mangler/compressor and beautifier toolkit
+
+underscore
+JavaScript's functional programming helper library.
+
+watchify
+watch mode for browserify builds
+
+Update any source file and your browserify bundle will be recompiled on the spot.
